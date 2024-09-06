@@ -1,0 +1,130 @@
+/* ベースの設定 */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a; /* 暗い背景色 */
+    color: #ffffff; /* 白いテキスト */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* ナビゲーション */
+header {
+    width: 100%;
+    background-color: #333333; /* ダークグレーでシンプルな印象 */
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* 暗いシャドウで浮き上がる効果 */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff007f; /* ピンクでホバー時のアクセント */
+}
+
+/* コンテンツセクション */
+.container, .content-section {
+    margin: 50px 0;
+    padding: 30px;
+    background-color: #262626; /* ダークグレーの背景 */
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); /* 暗いシャドウ */
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: #ff007f; /* ピンクのアクセントカラー */
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+/* フォーム */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #ffffff; /* 白いテキスト */
+}
+
+input[type="text"], input[type="password"], textarea, select {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ff007f; /* ピンクのボーダー */
+    border-radius: 8px;
+    background-color: #333333; /* ダークグレーの背景 */
+    font-size: 1em;
+    width: 80%;
+    color: #ffffff; /* 白い文字 */
+    transition: border-color 0.3s ease;
+}
+
+input[type="submit"], button {
+    background-color: #ff007f; /* ピンクの背景 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #cc0066; /* ホバー時の暗いピンク */
+}
+
+/* メンバー詳細表示 */
+#memberDetails {
+    background-color: #333333;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* 暗いシャドウ */
+}
+
+/* カスタム入力要素（チェックボックスやラジオボタンのスタイル） */
+input[type="checkbox"], input[type="radio"] {
+    accent-color: #ff007f; /* チェックボックス、ラジオボタンのピンクのアクセント */
+}
+
+input[type="range"] {
+    accent-color: #ff007f; /* スライダーのアクセントカラー */
+}
+
+progress {
+    accent-color: #ff007f; /* プログレスバーのアクセントカラー */
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>チームビルディングアプリケーション</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ナビゲーションメニュー -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#" class="nav-link" data-target="registerSection">新規登録</a></li>
+          <li><a href="#" class="nav-link" data-target="loginSection">ログイン</a></li>
+          <li><a href="#" class="nav-link" data-target="profile1">Profile作成</a></li>
+          <li><a href="#" class="nav-link" data-target="dataSection">データ管理</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ユーザー登録セクション -->
+    <div id="registerSection" class="container">
+      <h2>新規登録</h2>
+      <form id="registerForm">
+        <label for="username">ユーザー名:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">パスワード:</label>
+        <input type="password" id="password" name="password" required />
+        <button type="submit">登録</button>
+      </form>
+      <p>すでにアカウントをお持ちですか？<button id="showLoginForm">ログイン</button></p>
+    </div>
+
+    <!-- ログインセクション -->
+    <div id="loginSection" class="container" style="display: none;">
+      <h2>ログイン</h2>
+      <form id="loginForm">
+        <label for="loginUsername">ユーザー名:</label>
+        <input type="text" id="loginUsername" name="loginUsername" required />
+        <label for="loginPassword">パスワード:</label>
+        <input type="password" id="loginPassword" name="loginPassword" required />
+        <button type="submit">ログイン</button>
+      </form>
+      <p>アカウントをお持ちでないですか？<button id="showRegisterForm">新規登録</button></p>
+    </div>
+
+    <!-- メンバープロファイル作成セクション -->
+    <div id="profile1" class="content-section" style="display: none;">
+        <h2>メンバープロファイル作成</h2> 
+            <form
+              action="https://script.google.com/macros/s/ダミーコード/exec"
+              method="post"
+            >
+              <label for="name">Name:</label><br />
+              <input type="text" id="name" name="name" /><br />
+              <label for="gender">Gender:</label><br />
+              <input type="text" id="gender" name="gender" /><br />
+              <label for="animal">position:</label><br />
+              <input type="text" id="animal" name="animal" /><br /><br />
+            <!-- 2. メンバープロファイル_その２：バリュー -->
+                <label for="skills">skills:</label><br />
+                <input type="text" id="skills" name="skills" /><br />
+                <label for="strengths">strengths:</label><br />
+                <input type="text" id="strengths" name="strengths" /><br />
+                <label for="values">values:</label><br />
+                <input type="text" id="values" name="values" /><br /><br />
+            <!-- 2. サブミットボタン -->
+              <input type="submit" value="Submit" />
+            </form>
+        </div>
+    <!-- データ管理セクション -->
+    <div id="dataSection" class="container" style="display: none;">
+      <h2>データ管理</h2>
+      <label for="memberSelect">メンバーを選択:</label>
+      <select id="memberSelect">
+        <option value="" disabled selected>メンバーを選択してください</option>
+      </select>
+
+      <div id="memberDetails" style="display: none;">
+        <h3>メンバー詳細</h3>
+        <p><strong>Name:</strong> <span id="detailName"></span></p>
+        <p><strong>Gender:</strong> <span id="detailGender"></span></p>
+        <p><strong>Position:</strong> <span id="detailPosition"></span></p>
+        <p><strong>Skills:</strong> <span id="detailSkills"></span></p>
+        <p><strong>Strengths:</strong> <span id="detailStrengths"></span></p>
+        <p><strong>Values:</strong> <span id="detailValues"></span></p>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+  </body>
+</html>
